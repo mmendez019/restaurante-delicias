@@ -3,12 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name ="description" cotent="La mejor comida mexica"/>
+  <meta name ="description" cotent="La mejor comida mexicana"/>
   <meta name="keywords" content ="Raíces, Sabores, Restaurante, Mexicano"/>
   <meta name="author" content=" Michelle Aranza Méndez López"/>
   <meta name ="copyright" content="®2025 Michelle Aranza Méndez Lopez"/>
   <title>Menú de Raíces y Sabores</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+  body{
+    background-color: white;
+  }
+
+  .bg-primary{
+    background-color: white !important;
+  }
+
+  .text-white{
+    color: #1d3751 !important;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger,
+  .btn-warning,
+  .btn-success{
+    background-color: #1d3751 !important;
+    border-color: #1d3751 !important;
+    color: white !important;
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-danger:hover,
+  .btn-warning:hover,
+  .btn-success:hover{
+    background-color: #27496b !important;
+    border-color: #27496b !important;
+  }
+
+  h1, h2, h3, h4, h5, p, li, th, td{
+    color: #1d3751;
+  }
+
+  .accordion-button{
+    background-color: #1d3751 !important;
+    color: white !important;
+  }
+
+  .accordion-button:not(.collapsed){
+    background-color: #27496b !important;
+    color: white !important;
+  }
+
+  .card{
+    border: 1px solid #1d3751;
+  }
+
+  table{
+    width: 100%;
+  }
+
+  th{
+    background-color: #1d3751;
+    color: white;
+    padding: 10px;
+  }
+
+  td{
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  footer{
+    background-color: white;
+  }
+</style>
 </head>
 <body>
 
@@ -176,22 +245,15 @@
   
 <div class="card mx-auto mb-5" style="width: 18rem;">
 <div class="card-body">
-<h5 class="card-title">Título de la Tarjeta</h5>
+<h5 class="card-title">Conoce más sobre nosotros </h5>
 <p class="card-text">
-Somos un restaurante 100% Mexicano
+Somos un restaurante 100% Mexicano comprometido con compartir los sabores, colores y tradiciones de México en cada platillo.
 </p>
 <a href="pedido.html"><button class="btn btn-secondary">Haz un pedido en linea.</button></a>
 <a href="#" class="btn btn-primary">Inicio</a>
 </div>
 </div>
 
-<div class="card  mx-auto mb-5 " style="width: 30rem;">
-<img src="tacos.jpeg" class="card-img">
-<div class="card-body">
-<h5 class="card-title">Tacos Pastor</h5>
-<p class="card-text">Servidos con un agua de sabor.</p>
-</div>
-</div>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -276,7 +338,7 @@ Información Adicional
   <button class="btn btn-warning m-3"
           data-bs-toggle="collapse"
           data-bs-target="#collapse1">
-    Contacto / Reservación
+    Crear Reservación
   </button>
   <!-- Formulario -->
   <div class="collapse" id="collapse1">
