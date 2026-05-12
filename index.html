@@ -3,392 +3,690 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name ="description" cotent="La mejor comida mexicana"/>
-  <meta name="keywords" content ="Raíces, Sabores, Restaurante, Mexicano"/>
-  <meta name="author" content=" Michelle Aranza Méndez López"/>
-  <meta name ="copyright" content="®2025 Michelle Aranza Méndez Lopez"/>
-  <title>Menú de Raíces y Sabores</title>
+
+  <meta name="description" content="La mejor comida mexicana"/>
+  <meta name="keywords" content="Raíces, Sabores, Restaurante, Mexicano"/>
+  <meta name="author" content="Michelle Aranza Méndez López"/>
+  <meta name="copyright" content="®2025 Michelle Aranza Méndez López"/>
+
+  <title>Raíces y Sabores</title>
+
   <link rel="stylesheet" href="css/bootstrap.min.css" />
+
   <style>
-  body{
-    background-color: #E5DBD1;
-  }
 
-  .bg-primary{
-    background-color: #623F1B !important;
-  }
+    body{
+      background-color: #E5DBD1;
+      font-family: Arial, sans-serif;
+      color: #623F1B;
+    }
 
-  .text-white{
-    color: #1d3751 !important;
-  }
+    /* HEADER */
+    .bg-primary{
+      background-color: #322470 !important;
+    }
 
-  .btn-primary,
-  .btn-secondary,
-  .btn-danger,
-  .btn-warning,
-  .btn-success{
-    background-color: #1d3751 !important;
-    border-color: #1d3751 !important;
-    color: white !important;
-  }
+    .text-white{
+      color: #E5DBD1 !important;
+    }
 
-  .btn-primary:hover,
-  .btn-secondary:hover,
-  .btn-danger:hover,
-  .btn-warning:hover,
-  .btn-success:hover{
-    background-color: #27496b !important;
-    border-color: #27496b !important;
-  }
+    h1{
+      color: #EDCC4D !important;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
 
-  h1, h2, h3, h4, h5, p, li, th, td{
-    color: #1d3751;
-  }
+    h2, h3, h4, h5{
+      color: #322470;
+      font-weight: bold;
+    }
 
-  .accordion-button{
-    background-color: #1d3751 !important;
-    color: white !important;
-  }
+    p, li, td{
+      color: #623F1B;
+    }
 
-  .accordion-button:not(.collapsed){
-    background-color: #27496b !important;
-    color: white !important;
-  }
+    /* BOTONES */
+    .btn-primary,
+    .btn-secondary,
+    .btn-danger,
+    .btn-warning,
+    .btn-success{
+      background-color: #BB240A !important;
+      border-color: #BB240A !important;
+      color: #E5DBD1 !important;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 10px 18px;
+      transition: 0.3s;
+    }
 
-  .card{
-    border: 1px solid #1d3751;
-  }
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-danger:hover,
+    .btn-warning:hover,
+    .btn-success:hover{
+      background-color: #322470 !important;
+      border-color: #322470 !important;
+      color: #EDCC4D !important;
+    }
 
-  table{
-    width: 100%;
-  }
+    /* ACORDEÓN */
+    .accordion-item{
+      border: none;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
-  th{
-    background-color: #1d3751;
-    color: white;
-    padding: 10px;
-  }
+    .accordion-button{
+      background-color: #322470 !important;
+      color: #E5DBD1 !important;
+      font-weight: bold;
+    }
 
-  td{
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
+    .accordion-button:not(.collapsed){
+      background-color: #BB240A !important;
+      color: #E5DBD1 !important;
+    }
 
-  footer{
-    background-color: white;
-  }
-</style>
+    .accordion-body{
+      background-color: white;
+    }
+
+    /* TABLAS */
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th{
+      background-color: #322470;
+      color: #E5DBD1;
+      padding: 14px;
+    }
+
+    td{
+      padding: 12px;
+      border-bottom: 1px solid #E5DBD1;
+    }
+
+    /* TARJETAS */
+    .card{
+      border: none;
+      border-radius: 18px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .card-title{
+      color: #322470;
+      font-weight: bold;
+    }
+
+    .card-text{
+      color: #623F1B;
+    }
+
+    /* ALERTA */
+    .alert-success{
+      background-color: #EDCC4D !important;
+      border: none;
+      color: #322470 !important;
+      font-weight: bold;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      background-color: #322470 !important;
+    }
+
+    .navbar-brand,
+    .nav-link{
+      color: #E5DBD1 !important;
+      font-weight: bold;
+    }
+
+    .nav-link:hover{
+      color: #EDCC4D !important;
+    }
+
+    /* MODAL */
+    .modal-content{
+      border-radius: 20px;
+      border: none;
+    }
+
+    .modal-header{
+      background-color: #322470;
+      color: #E5DBD1;
+    }
+
+    .modal-footer{
+      background-color: #E5DBD1;
+    }
+
+    /* FOOTER */
+    footer{
+      background-color: #322470;
+      padding: 40px;
+      margin-top: 50px;
+    }
+
+    footer h3,
+    footer p{
+      color: #E5DBD1;
+    }
+
+    /* FORMULARIO */
+    iframe{
+      border-radius: 15px;
+      background-color: white;
+    }
+
+    /* CARRUSEL */
+    .carousel img{
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+  </style>
+
 </head>
+
 <body>
-  <header>
-<div class="container">
-<div class="row">
-<div class="col-12 col-md-12 col-lg-12 col-sm-12 bg-primary text-white text-center p-3">
-    <div class="logo">
-      <img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/logo.jpg" class="d-block mx-auto w-25 h-25" alt="Logo del Restaurante" />
-      <h1> <p class= "text color: #EDCC4D">  Raíces y Sabores </p></h1>
-    </div>
-    <nav>
-      <ul class="list-inline text-center">
-        <li class="list-inline-item"><a href="#entradas"><button class="btn btn-primary">Entradas</button></a></li>
-        <li class="list-inline-item"><a href="#platos"><button class="btn btn-secondary">Platos Fuertes</button></a></li>
-        <li class="list-inline-item"><a href="#postres"><button class="btn btn-danger">Postres</button></a></li>
-        <li class="list-inline-item"><a href="#contacto"><button class="btn btn-warning">Reservación</button></a></li>
-      </ul>
-    </nav>
-    </div>
-  </header>
-<div class="container">
-<div class="row">
-<div class="col-12 col-md-12 col-lg-12 col-sm-12 bg-primary text-white text-center p-3">
-  <div class="text-secondary">
-    <section id="menu">    
-  <div class="accordion" id="accordion1">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-        Entradas
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show"
-      data-bs-parent="#accordion1">
-      <div class="accordion-body">
-        <article id="entradas">
-        <h2>Entradas</h2>
-        <ol>
-          <li>
-            <h3>Ensalada César <span>$8.00</span></h3>
-            <p>Lechuga romana, crotones, queso parmesano y aderezo césar.</p>
-          </li>
-          <li>
-            <h3>Sopa del Día <span>$6.50</span></h3>
-            <p>Pregunta por nuestra deliciosa sopa casera del día.</p>
-          </li>
-          <li>
-            <h3>Bruschetta <span>$8.00</span></h3>
-            <p>Pequeñas rebanadas de pan tostado, generalmente aliñadas con aceite de oliva, ajo y cubiertas con tomate fresco, albahaca y a veces un poco de queso. Es fresca y ligera, ideal para abrir el apetito.</p>
-          </li>
-          <li>
-            <h3>Ceviche <span>$8.00</span></h3>
-            <p>Plato de pescado o mariscos crudos marinados en jugo de limón o lima, mezclados con cebolla, cilantro y chiles. Es ácido, refrescante y perfecto como entrada en días calurosos.</p>
-          </li>
-          <li>
-            <h3>Empanaditas <span>$8.00</span></h3>
-            <p>Pequeñas empanadas rellenas de carne, queso, verduras o mariscos. Se pueden hornear o freír y son muy fáciles de comer con la mano, perfectas para compartir antes del plato principal.</p>
-          </li>
-        </ol>
-      </article>
-      </div>
-      </div>
-      </div>
 
-      <div class="accordion-item">
-  <h2 class="accordion-header">
-      <button class="accordion-button collapsed" data-bs-toggle="collapse"
-      data-bs-target="#collapseTwo">
-        Platos Fuertes
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion1">
-    <div class="accordion-body">
-      <!-- Platos Fuertes con tabla -->
-      <article id="platos">
-        <h2>Platos Fuertes</h2>
-        <table>
-          <tr>
-            <th>Plato</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-          </tr>
-          <tr>
-            <td>Lomo Saltado</td>
-            <td>Carne salteada con cebolla, tomate y papas fritas.</td>
-            <td>$14.00</td>
-          </tr>
-          <tr>
-            <td>Pollo a la Brasa</td>
-            <td>Acompañado de papas doradas y ensalada fresca.</td>
-            <td>$13.00</td>
-          </tr>
-          <tr>
-            <td>Pollo al horno con verduras</td>
-            <td>Pollo sazonado y cocinado al horno acompañado de verduras como papas, zanahorias y calabacitas. Es un plato completo, nutritivo y muy reconfortante.</td>
-            <td>$14.00</td>
-          </tr>
-          <tr>
-            <td>Filete de res a la parrilla</td>
-            <td>Corte de carne de res cocinado a la parrilla, jugoso por dentro y dorado por fuera. Se sirve generalmente con guarniciones como puré de papas, arroz o ensalada.</td>
-            <td>$14.00</td>
-          </tr>
-          <tr>
-            <td>Pasta Alfredo con pollo</td>
-            <td>Pasta cocida acompañada de una cremosa salsa Alfredo y trozos de pollo. Es un plato lleno de sabor, ideal para los amantes de la comida italiana.</td>
-            <td>$14.00</td>
-          </tr>
-        </table>
-      </article>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 bg-primary text-center p-4 rounded-bottom">
+
+        <div class="logo">
+          <img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/logo.jpg"
+               class="d-block mx-auto mb-3"
+               style="width:180px; border-radius:20px;"
+               alt="Logo del Restaurante" />
+
+          <h1 class="text-center">
+            Raíces y Sabores
+          </h1>
         </div>
-      </div>
-      </div>
 
-<div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" data-bs-toggle="collapse"
-      data-bs-target="#collapseThree">
-        Postres
-      </button>
-    </h2>
-  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion1">
-    <div class="accordion-body">
-      <!-- Postres con lista desordenada -->
-      <article id="postres">
-        <h2>Postres</h2>
-        <ul>
-          <li>
-            <h3>Tarta de Queso <span>$5.00</span></h3>
-            <p>Con base de galleta y coulis de frutos rojos.</p>
-          </li>
-          <li>
-            <h3>Helado Artesanal <span>$4.50</span></h3>
-            <p>Sabores variados de temporada.</p>
-          </li>
-          <li>
-            <h3>Tiramisú <span>$4.50</span></h3>
-            <p>Sabores variados de temporada.</p>
-          </li>
-          <li>
-            <h3>Flan napolitano <span>$4.50</span></h3>
-            <p>Postre tradicional a base de huevo, leche y azúcar, con una textura suave y cubierta de caramelo líquido. Es clásico, sencillo y siempre delicioso.</p>
-          </li>
-          <li>
-            <h3>Churros con chocolate <span>$4.50</span></h3>
-            <p>Masa frita en forma alargada, cubierta de azúcar y canela, que suele acompañarse con chocolate caliente espeso para sumergirlos. Es crujiente por fuera y suave por dentro.</p>
-          </li>
-        </ul>
-      </article>
-</div>
-</div>
-</div>
-</div>
-    </section>
+        <nav>
+          <ul class="list-inline text-center mt-4">
+            <li class="list-inline-item">
+              <a href="#entradas">
+                <button class="btn btn-primary">Entradas</button>
+              </a>
+            </li>
 
-    <aside>
-      <div class="alert alert-success" role="alert">
-      <h4>Promoción del día</h4>
-      <p>¡Ordena un plato fuerte y recibe una bebida gratis!</p>
-      </div>
-    </aside>
-  </div>
-  </div>
-</div>
-  
-<div class="card mx-auto mb-5" style="width: 18rem;">
-<div class="card-body">
-<h5 class="card-title">Conoce más sobre nosotros </h5>
-<p class="card-text">
-Somos un restaurante 100% Mexicano comprometido con compartir los sabores, colores y tradiciones de México en cada platillo.
-</p>
-<a href="pedido.html"><button class="btn btn-secondary">Haz un pedido en linea.</button></a>
-<a href="#" class="btn btn-primary">Inicio</a>
-</div>
-</div>
+            <li class="list-inline-item">
+              <a href="#platos">
+                <button class="btn btn-secondary">Platos Fuertes</button>
+              </a>
+            </li>
 
+            <li class="list-inline-item">
+              <a href="#postres">
+                <button class="btn btn-danger">Postres</button>
+              </a>
+            </li>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#">Otras opciones</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <li class="list-inline-item">
+              <a href="#contacto">
+                <button class="btn btn-warning">Reservación</button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
       </div>
     </div>
+  </div>
+</header>
+
+<div class="container my-5">
+
+<section id="menu">
+
+<div class="accordion" id="accordion1">
+
+<!-- ENTRADAS -->
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne">
+Entradas
+</button>
+</h2>
+
+<div id="collapseOne"
+     class="accordion-collapse collapse show"
+     data-bs-parent="#accordion1">
+
+<div class="accordion-body">
+
+<article id="entradas">
+
+<h2>Entradas</h2>
+
+<ol>
+
+<li>
+<h3>Ensalada César <span>$8.00</span></h3>
+<p>Lechuga romana, crotones, queso parmesano y aderezo césar.</p>
+</li>
+
+<li>
+<h3>Sopa del Día <span>$6.50</span></h3>
+<p>Pregunta por nuestra deliciosa sopa casera del día.</p>
+</li>
+
+<li>
+<h3>Bruschetta <span>$8.00</span></h3>
+<p>Pan tostado con tomate fresco, albahaca y aceite de oliva.</p>
+</li>
+
+<li>
+<h3>Ceviche <span>$8.00</span></h3>
+<p>Mariscos marinados en limón con cilantro y cebolla.</p>
+</li>
+
+<li>
+<h3>Empanaditas <span>$8.00</span></h3>
+<p>Empanadas rellenas perfectas para compartir.</p>
+</li>
+
+</ol>
+
+</article>
+
+</div>
+</div>
+</div>
+
+<!-- PLATOS -->
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo">
+Platos Fuertes
+</button>
+</h2>
+
+<div id="collapseTwo"
+     class="accordion-collapse collapse"
+     data-bs-parent="#accordion1">
+
+<div class="accordion-body">
+
+<article id="platos">
+
+<h2>Platos Fuertes</h2>
+
+<table>
+
+<tr>
+<th>Plato</th>
+<th>Descripción</th>
+<th>Precio</th>
+</tr>
+
+<tr>
+<td>Lomo Saltado</td>
+<td>Carne salteada con cebolla y papas fritas.</td>
+<td>$14.00</td>
+</tr>
+
+<tr>
+<td>Pollo a la Brasa</td>
+<td>Con papas doradas y ensalada fresca.</td>
+<td>$13.00</td>
+</tr>
+
+<tr>
+<td>Filete de Res</td>
+<td>Jugoso corte a la parrilla.</td>
+<td>$14.00</td>
+</tr>
+
+<tr>
+<td>Pasta Alfredo</td>
+<td>Salsa cremosa con pollo.</td>
+<td>$14.00</td>
+</tr>
+
+</table>
+
+</article>
+
+</div>
+</div>
+</div>
+
+<!-- POSTRES -->
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseThree">
+Postres
+</button>
+</h2>
+
+<div id="collapseThree"
+     class="accordion-collapse collapse"
+     data-bs-parent="#accordion1">
+
+<div class="accordion-body">
+
+<article id="postres">
+
+<h2>Postres</h2>
+
+<ul>
+
+<li>
+<h3>Tarta de Queso <span>$5.00</span></h3>
+<p>Con frutos rojos.</p>
+</li>
+
+<li>
+<h3>Helado Artesanal <span>$4.50</span></h3>
+<p>Sabores de temporada.</p>
+</li>
+
+<li>
+<h3>Flan Napolitano <span>$4.50</span></h3>
+<p>Tradicional y suave.</p>
+</li>
+
+<li>
+<h3>Churros con Chocolate <span>$4.50</span></h3>
+<p>Crujientes y deliciosos.</p>
+</li>
+
+</ul>
+
+</article>
+
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROMO -->
+<aside class="my-5">
+<div class="alert alert-success text-center">
+<h4>Promoción del día</h4>
+<p>¡Ordena un plato fuerte y recibe una bebida gratis!</p>
+</div>
+</aside>
+
+<!-- CARD -->
+<div class="card mx-auto mb-5" style="width: 22rem;">
+
+<div class="card-body text-center">
+
+<h5 class="card-title">
+Conoce más sobre nosotros
+</h5>
+
+<p class="card-text">
+Somos un restaurante 100% mexicano comprometido con compartir sabores y tradiciones.
+</p>
+
+<a href="pedido.html">
+<button class="btn btn-secondary">
+Haz un pedido en línea
+</button>
+</a>
+
+</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg rounded">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#">
+Otras opciones
+</a>
+
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+     id="navbarNavAltMarkup">
+
+<div class="navbar-nav">
+
+<a class="nav-link active" href="#">Home</a>
+<a class="nav-link" href="#">Menú</a>
+<a class="nav-link" href="#">Eventos</a>
+
+</div>
+</div>
 </div>
 </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-12 bg-primary text-white text-center p-3">
-      <div class="row border m-5">
-        <div class="col-12 d-flex justify-content-center">
-          
-          <!-- Carrusel -->
-          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/flautas.jpg" class="d-block mx-auto w-25" alt="Primera imagen del carrusel">
-              </div>
-              <div class="carousel-item">
-                <img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/tamales.jpg" class="d-block mx-auto w-25" alt="Segunda imagen del carrusel">
-              </div>
-              <div class="carousel-item">
-                <img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/enchiladas.jpg" class="d-block mx-auto w-25" alt="Tercera imagen del carrusel">
-              </div>
-            </div>
-          </div>
-        </div>
-    
+<!-- CARRUSEL -->
 <div class="container my-5">
-  <h2 class="text-white text-center mb-4">Agrega tu imagen favorita</h2>
- 
-  <div class="input-group mb-3">
-    <input type="text" id="inputImagen" class="form-control" placeholder="Ingresa la URL de una imagen">
-    <button id="btnAgregarImagen" class="btn btn-success">Agregar Imagen</button>
-  </div>
- 
-  <div id="galeriaImagenes" class="row row-cols-1 row-cols-md-3 g-4">
-   
-    <!-- Aquí se insertarán las imágenes dinámicamente -->
-  </div>
+
+<div class="row">
+
+<div class="col-12 bg-primary text-center p-5 rounded">
+
+<div id="carouselExample"
+     class="carousel slide"
+     data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/flautas.jpg"
+     class="d-block mx-auto w-50"
+     alt="Flautas">
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#modalExam">
-Información Adicional
+<div class="carousel-item">
+<img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/tamales.jpg"
+     class="d-block mx-auto w-50"
+     alt="Tamales">
+</div>
+
+<div class="carousel-item">
+<img src="https://tiendacloud01mml.blob.core.windows.net/imagenesmich/enchiladas.jpg"
+     class="d-block mx-auto w-50"
+     alt="Enchiladas">
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- GALERÍA -->
+<div class="container my-5">
+
+<h2 class="text-center mb-4">
+Agrega tu imagen favorita
+</h2>
+
+<div class="input-group mb-3">
+
+<input type="text"
+       id="inputImagen"
+       class="form-control"
+       placeholder="Ingresa la URL de una imagen">
+
+<button id="btnAgregarImagen"
+        class="btn btn-success">
+Agregar Imagen
 </button>
-<!-- Modal -->
+
+</div>
+
+<div id="galeriaImagenes"
+     class="row row-cols-1 row-cols-md-3 g-4">
+</div>
+
+</div>
+
+<!-- MODAL -->
+<button type="button"
+        class="btn btn-primary m-5"
+        data-bs-toggle="modal"
+        data-bs-target="#modalExam">
+
+Información Adicional
+
+</button>
+
 <div class="modal fade" id="modalExam">
-  <div class="modal-dialog">
-  <div class="modal-content">
-  <div class="modal-header">
-  <h1 class="modal-title fs-5">!!Felicidades!!</h1>
-  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-  </div>
-  <div class="modal-body">
-  Ahora has terminado con la sesión 9 casi estás listo
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h1 class="modal-title fs-5">
+¡Felicidades!
+</h1>
+
+<button type="button"
+        class="btn-close"
+        data-bs-dismiss="modal">
+</button>
+
 </div>
+
+<div class="modal-body">
+Ahora has terminado con la sesión 9.
+</div>
+
 <div class="modal-footer">
-<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary">Guardar cambios</button>
-  </div>
-  </div>
-  </div>
+
+<button type="button"
+        class="btn btn-secondary"
+        data-bs-dismiss="modal">
+Cerrar
+</button>
+
+<button type="button"
+        class="btn btn-primary">
+Guardar cambios
+</button>
+
 </div>
 </div>
-  <footer id="contacto" class="text-center my-5">
-  <!-- Botón -->
-  <button class="btn btn-warning m-3"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse1">
-    Crear Reservación
-  </button>
-  <!-- Formulario -->
-  <div class="collapse" id="collapse1">
-    <div class="card card-body">
-      <iframe 
-        src="https://forms.office.com/r/p2qvr7KyjQ?embed=true"
-        width="100%"
-        height="600"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-      </iframe>
-    </div>
-  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contacto" class="text-center">
+
+<h3 class="mb-4">
+Reserva con nosotros
+</h3>
+
+<button class="btn btn-warning mb-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse1">
+
+Crear Reservación
+
+</button>
+
+<div class="collapse" id="collapse1">
+
+<div class="card card-body">
+
+<iframe
+src="https://forms.office.com/r/p2qvr7KyjQ?embed=true"
+width="100%"
+height="600"
+frameborder="0">
+</iframe>
+
+</div>
+</div>
+
 </footer>
-  <a href="bar.html"><button class="btn btn-secondary">Visita nuestro bar</button></a>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const inputImagen = document.getElementById("inputImagen");
-    const btnAgregar = document.getElementById("btnAgregarImagen");
-    const galeria = document.getElementById("galeriaImagenes");
 
-    btnAgregar.addEventListener("click", function () {
-      const url = inputImagen.value.trim();
-     
-      if (url) {
-        const col = document.createElement("div");
-        col.className = "col";
+<div class="text-center my-4">
 
-        const card = document.createElement("div");
-        card.className = "card h-100";
+<a href="bar.html">
+<button class="btn btn-secondary">
+Visita nuestro bar
+</button>
+</a>
 
-        const img = document.createElement("img");
-        img.src = url;
-        img.className = "card-img-top";
-        img.alt = "Imagen agregada por el usuario";
+</div>
 
-        card.appendChild(img);
-        col.appendChild(card);
-        galeria.appendChild(col);
+<script>
 
-        // Limpiar el input
-        inputImagen.value = "";
-      } else {
-        alert("Por favor, ingresa una URL válida.");
-      }
-    });
-  });
+document.addEventListener("DOMContentLoaded", function () {
+
+const inputImagen = document.getElementById("inputImagen");
+const btnAgregar = document.getElementById("btnAgregarImagen");
+const galeria = document.getElementById("galeriaImagenes");
+
+btnAgregar.addEventListener("click", function () {
+
+const url = inputImagen.value.trim();
+
+if (url) {
+
+const col = document.createElement("div");
+col.className = "col";
+
+const card = document.createElement("div");
+card.className = "card h-100";
+
+const img = document.createElement("img");
+img.src = url;
+img.className = "card-img-top";
+img.alt = "Imagen agregada por el usuario";
+
+card.appendChild(img);
+col.appendChild(card);
+galeria.appendChild(col);
+
+inputImagen.value = "";
+
+} else {
+
+alert("Por favor, ingresa una URL válida.");
+
+}
+
+});
+
+});
+
 </script>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
